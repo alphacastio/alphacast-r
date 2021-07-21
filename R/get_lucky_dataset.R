@@ -13,7 +13,7 @@
 
 get_lucky_dataset <- function(lucky_words, alphacast_api_key, long = FALSE) {
   r <- httr::GET("https://charts.alphacast.io/api/datasets",
-                 httr::authenticate(user = api_key, password = ""))
+                 httr::authenticate(user = alphacast_api_key, password = ""))
   r <- unique(dplyr::bind_rows(content(r))[ ,-5])
   r <- dplyr::filter(r, purrr::map_int(strsplit(as.character(tolower(r$name)),'[[:punct:] ]'),
                                           ~sum(unique(.) %in% tolower(lucky_words))) == length(lucky_words))
