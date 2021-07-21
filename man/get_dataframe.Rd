@@ -9,9 +9,9 @@ get_dataframe(dataset_id, api_key, long = FALSE)
 \arguments{
 \item{dataset_id}{Dataset ID. It must be numeric.}
 
-\item{api_key}{API Key from Alphacast. You can get it from your Settings menu on the Alphacast Web.}
-
 \item{long}{Logical. Choose between data format.}
+
+\item{alphacast_api_key}{API Key from Alphacast. You can get it from your Settings menu on the Alphacast Web.}
 }
 \value{
 A dataframe with dates, entity and data.
@@ -20,6 +20,6 @@ A dataframe with dates, entity and data.
 Get a specified dataset in dataframe format directly from Alphacast API.
 }
 \examples{
-api_key = "ak_QDPD89fxwASlhWwdfeIO"
-resultad_fiscal <- get_dataframe(5542, api_key);
+alphacast_api_key = "ak_QDPD89fxwASlhWwdfeIO"
+resultad_fiscal <- get_dataframe(5542, alphacast_api_key);
 }

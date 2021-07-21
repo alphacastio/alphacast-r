@@ -4,10 +4,10 @@
 \alias{get_datasets}
 \title{Get datasets index}
 \usage{
-get_datasets(api_key)
+get_datasets(alphacast_api_key)
 }
 \arguments{
-\item{api_key}{API Key from Alphacast. You can get it from your Settings menu on the Alphacast Web.}
+\item{alphacast_api_key}{API Key from Alphacast. You can get it from your Settings menu on the Alphacast Web.}
 }
 \value{
 A index with all available datasets.
@@ -16,6 +16,6 @@ A index with all available datasets.
 Get all available datasets from Alphacast with your level of access.
 }
 \examples{
-api_key = "ak_QDPD89fxwASlhWwdfeIO"
-datasets_alphacast <- get_datasets(api_key)
+alphacast_api_key = "ak_QDPD89fxwASlhWwdfeIO"
+datasets_alphacast <- get_datasets(alphacast_api_key)
 }

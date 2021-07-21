@@ -4,12 +4,12 @@
 \alias{get_lucky_dataset}
 \title{Get Lucky Dataset}
 \usage{
-get_lucky_dataset(lucky_words, api_key, long = FALSE)
+get_lucky_dataset(lucky_words, alphacast_api_key, long = FALSE)
 }
 \arguments{
 \item{lucky_words}{One or more words in a vector. It can be a country, a variable or whatever!}
 
-\item{api_key}{API Key from Alphacast. You can get it from your Settings menu on the Alphacast Web.}
+\item{alphacast_api_key}{API Key from Alphacast. You can get it from your Settings menu on the Alphacast Web.}
 
 \item{long}{Logical. Choose between data format.}
 }
@@ -20,7 +20,7 @@ A dataset containing all the "lucky words" in the description.
 ¿Feelin' lucky? Get a random dataset containing one of two words you can choose to filter.
 }
 \examples{
-api_key = "ak_QDPD89fxwASlhWwdfeIO"
+alphacast_api_key = "ak_QDPD89fxwASlhWwdfeIO"
 lucky_words <- c("mobility", "apple")
-df <- get_lucky_dataser(lucky_words, api_key, long = TRUE)
+df <- get_lucky_dataset(lucky_words, alphacast_api_key, long = TRUE)
 }

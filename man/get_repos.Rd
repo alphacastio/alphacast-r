@@ -4,10 +4,10 @@
 \alias{get_repos}
 \title{Get repositories}
 \usage{
-get_repos(api_key)
+get_repos(alphacast_api_key)
 }
 \arguments{
-\item{api_key}{API Key from Alphacast. You can get it from your Settings menu on the Alphacast Web.}
+\item{alphacast_api_key}{API Key from Alphacast. You can get it from your Settings menu on the Alphacast Web.}
 }
 \value{
 A index with all available repos.

@@ -9,7 +9,7 @@ get_repos_datasets(repo_id, api_key)
 \arguments{
 \item{repo_id}{Must be numeric. This is the id from the repo you want to get the datasets.}
 
-\item{api_key}{API Key from Alphacast. You can get it from your Settings menu on the Alphacast Web.}
+\item{alphacast_api_key}{API Key from Alphacast. You can get it from your Settings menu on the Alphacast Web.}
 }
 \value{
 A index with all datasets from the repo.
@@ -18,6 +18,6 @@ A index with all datasets from the repo.
 Get all available datasets from Alphacast with your level of access in the specified repo.
 }
 \examples{
-api_key = "ak_QDPD89fxwASlhWwdfeIO"
-arg_macro_basics <- get_repos_datasets(20, api_key)
+alphacast_api_key = "ak_QDPD89fxwASlhWwdfeIO"
+arg_macro_basics <- get_repos_datasets(20, alphacast_api_key)
 }
