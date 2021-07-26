@@ -11,6 +11,6 @@
 get_repos <- function(alphacast_api_key) {
   r <- httr::GET("https://api.alphacast.io/repositories",
                  httr::authenticate(user = alphacast_api_key, password = ""))
-  unique(dplyr::bind_rows(content(r)))
+  unique(dplyr::bind_rows(httr::content(r)))
 }
 

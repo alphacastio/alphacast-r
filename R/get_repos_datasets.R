@@ -13,7 +13,7 @@ get_repos_datasets <- function(repo_id, api_key) {
   if (is.numeric(repo_id)){
     r <- httr::GET("https://api.alphacast.io/datasets", query = list(repo_id = repo_id),
                    httr::authenticate(user = alphacast_api_key, password = ""))
-    r <- dplyr::bind_rows(content(r))
+    r <- dplyr::bind_rows(httr::content(r))
     r[which(r$repositoryId==repo_id), ]
   }
   else {

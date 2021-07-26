@@ -11,6 +11,6 @@
 get_datasets <- function(alphacast_api_key) {
     r <- httr::GET("https://charts.alphacast.io/api/datasets",
                    httr::authenticate(user = alphacast_api_key, password = ""))
-    unique(dplyr::bind_rows(content(r))[ ,-5])
+    unique(dplyr::bind_rows(httr::content(r))[ ,-5])
 }
 

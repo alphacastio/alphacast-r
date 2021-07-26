@@ -16,7 +16,7 @@ get_dataframe <- function(dataset_id, alphacast_api_key, long = FALSE) {
   if (is.numeric(dataset_id)){
     r <- httr::GET(paste("https://charts.alphacast.io/api/datasets/", dataset_id,".csv", sep=""),
                     httr::authenticate(user = alphacast_api_key, password = ""))
-  r <- content(r)
+  r <- httr::content(r)
    if (isTRUE(long)) {
      r <- reshape2::melt(r, id.vars = c("Entity", "Year"))
      r
@@ -28,4 +28,3 @@ get_dataframe <- function(dataset_id, alphacast_api_key, long = FALSE) {
     return("Error: dataset_id must be numeric.")
   }
 }
-
