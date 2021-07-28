@@ -17,7 +17,7 @@ get_repos_datasets <- function(repo_id, api_key) {
     r[which(r$repositoryId==repo_id), ]
   }
   else {
-    return("Error: repo_id must be numeric.")
+    stop("Error: repo_id must be numeric.")
   }
 }
 
