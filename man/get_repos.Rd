@@ -16,6 +16,6 @@ A index with all available repos.
 Get all available repositories from Alphacast with your level of access.
 }
 \examples{
-api_key = "ak_QDPD89fxwASlhWwdfeIO"
+alphacast_api_key = "ak_QDPD89fxwASlhWwdfeIO"
 repos_alphacast <- get_repos(api_key)
 }

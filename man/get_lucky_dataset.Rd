@@ -7,7 +7,7 @@
 get_lucky_dataset(lucky_words, alphacast_api_key, long = FALSE)
 }
 \arguments{
-\item{lucky_words}{One or more words in a vector. It can be a country, a variable or whatever!}
+\item{lucky_words}{One or more words in a vector.}
 
 \item{alphacast_api_key}{API Key from Alphacast. You can get it from your Settings menu on the Alphacast Web.}
 
@@ -17,7 +17,7 @@ get_lucky_dataset(lucky_words, alphacast_api_key, long = FALSE)
 A dataset containing all the "lucky words" in the description.
 }
 \description{
-¿Feelin' lucky? Get a random dataset containing one of two words you can choose to filter.
+¿Feelin' lucky? Get a random dataset containing one or more words you can choose to filter.
 }
 \examples{
 alphacast_api_key = "ak_QDPD89fxwASlhWwdfeIO"

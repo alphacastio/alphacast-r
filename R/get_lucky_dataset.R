@@ -1,7 +1,7 @@
 #' Get Lucky Dataset
 #'
-#' ¿Feelin' lucky? Get a random dataset containing one of two words you can choose to filter.
-#' @param lucky_words One or more words in a vector. It can be a country, a variable or whatever!
+#' ¿Feelin' lucky? Get a random dataset containing one or more words you can choose to filter.
+#' @param lucky_words One or more words in a vector.
 #' @param alphacast_api_key API Key from Alphacast. You can get it from your Settings menu on the Alphacast Web.
 #' @param long Logical. Choose between data format.
 #' @return A dataset containing all the "lucky words" in the description.
