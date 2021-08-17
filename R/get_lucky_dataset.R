@@ -20,7 +20,7 @@ get_lucky_dataset <- function(lucky_words, alphacast_api_key, long = FALSE) {
   r <- r[round(runif(1, min=1, max=nrow(r))),1]
   r <- httr::GET(paste("https://charts.alphacast.io/api/datasets/", r,".csv", sep=""),
                  httr::authenticate(user = alphacast_api_key, password = ""))
-  r <- content(r)
+  r <- httr::content(r)
   if (isTRUE(long)) {
     r <- reshape2::melt(r, id.vars = c("Entity", "Year"))
     r
