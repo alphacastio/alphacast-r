@@ -1,6 +1,6 @@
 Package: Alphacast
 Type: Package
-Title: A easy way to get and post data, repos and charts from Alphacast. 
+Title: An easy way to get and post data, repos and charts from Alphacast. 
 Version: 0.1.3
 Author: Juan Ignacio Fulponi
 Maintainer: Juan Ignacio Fulponi <jfulponi@alphacast.io>
