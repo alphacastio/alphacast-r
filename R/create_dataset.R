@@ -21,15 +21,18 @@ form <- list(
 
 r <- httr::POST(url = url, body = form, config = httr::authenticate(user = alphacast_api_key, password = ""))
 
-dataset_id <- httr::content(r)$id
+dataset_id <- as.numeric(httr::content(r)$id)
 
 url2 <- paste("https://api.alphacast.io/datasets/", dataset_id, "/data?deleteMissingFromDB=True&onConflictUpdateDB=True", sep = "")
 
 r2 <- httr::PUT(url2, body = list(data = httr::upload_file(dataset)), config = httr::authenticate(user = alphacast_api_key, password = ""))
-httr::content(r2)
-#if (httr::content(r2)$status=="Requested") {
-#  print(paste0("El dataset se creó y se subió con éxito con el id ",httr::content(r)$id," en el repo ", repo_id, "."))
-#} else {
-#  stop("Hubo un error.")
-#}
+#httr::content(r2)
+if (httr::content(r2)$status=="Requested") {
+  print(paste0("El dataset se creó y se subió con éxito con el id ",httr::content(r)$id," en el repo ", repo_id, "."))
+} else {
+  stop("Hubo un error.")
 }
+}
+
+
+
