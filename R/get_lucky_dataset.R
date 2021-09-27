@@ -12,13 +12,13 @@
 #' @export
 
 get_lucky_dataset <- function(lucky_words, alphacast_api_key, long = FALSE) {
-  r <- httr::GET("https://charts.alphacast.io/api/datasets",
+  r <- httr::GET("https://api.alphacast.io/datasets",
                  httr::authenticate(user = alphacast_api_key, password = ""))
   r <- unique(dplyr::bind_rows(httr::content(r))[ ,-5])
   r <- dplyr::filter(r, purrr::map_int(strsplit(as.character(tolower(r$name)),'[[:punct:] ]'),
                                           ~sum(unique(.) %in% tolower(lucky_words))) == length(lucky_words))
   r <- r[round(runif(1, min=1, max=nrow(r))),1]
-  r <- httr::GET(paste("https://charts.alphacast.io/api/datasets/", r,".csv", sep=""),
+  r <- httr::GET(paste("https://api.alphacast.io/datasets/", r,".csv", sep=""),
                  httr::authenticate(user = alphacast_api_key, password = ""))
   r <- httr::content(r)
   if (isTRUE(long)) {

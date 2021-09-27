@@ -9,7 +9,7 @@
 #' @export
 
 get_datasets <- function(alphacast_api_key) {
-    r <- httr::GET("https://charts.alphacast.io/api/datasets",
+    r <- httr::GET("https://api.alphacast.io/datasets",
                    httr::authenticate(user = alphacast_api_key, password = ""))
     unique(dplyr::bind_rows(httr::content(r))[ ,-5])
 }
